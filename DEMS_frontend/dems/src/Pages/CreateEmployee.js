@@ -100,7 +100,7 @@ function CreateEmployee() {
           empid: res.empid,
         });
 
-        setSelectDep(res.dep.id);
+        // setSelectDep(res.dep.id);
         setShowdep(res.dep.depName);
       });
     }

@@ -1,0 +1,18 @@
+package com.dems.main;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+
+
+@SpringBootApplication
+public class DemsBackendApplication  {
+	
+	public static void main(String[] args) {
+		SpringApplication.run(DemsBackendApplication.class, args);
+	}
+	
+	
+	
+
+}

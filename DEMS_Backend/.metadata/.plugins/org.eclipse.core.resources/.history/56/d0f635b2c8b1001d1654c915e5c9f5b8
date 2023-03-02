@@ -1,0 +1,39 @@
+package com.dems.main;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.dems.main.model.Department;
+import com.dems.main.repository.DepartmentRepo;
+
+@SpringBootApplication
+
+
+
+
+public class DemsBackendApplication implements CommandLineRunner {
+	
+	@Autowired
+	private DepartmentRepo departmentRepository;
+
+	public static void main(String[] args) {
+		SpringApplication.run(DemsBackendApplication.class, args);
+	}
+	
+	
+	public void run(String... args) throws Exception{
+		Department dept = new Department(null, null, null, null,null);
+		
+		dept.setDepName("IT");
+		dept.setDepDescription("Department of Information and Technologies");
+		dept.setDepLocation("Chennai");
+		dept.setDepHOD("Arun");
+		dept.setDepEmpCount(250);
+		
+		departmentRepository.save(dept);
+		
+	}
+
+}

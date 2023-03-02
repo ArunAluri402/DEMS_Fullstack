@@ -1,0 +1,50 @@
+package com.dems.main.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+
+import com.dems.main.exception.DataNotFound;
+import com.dems.main.model.Employee;
+import com.dems.main.repository.EmployeeRepo;
+
+public class EmployeeService {
+	
+	@Autowired
+	private EmployeeRepo emprepo;
+	@Bean
+	public List<Employee> getAllEmp(){
+		return emprepo.findAll();
+	}
+	
+//	public Employee getEmpbyId(Integer id) {
+//		return emprepo.findById(id).orElseThrow(()-> new DataNotFound("Employee id"+id+"not exists"));
+//	}
+//	
+//	
+//	public Employee createEmp(Employee emp) {
+//		return emprepo.save(emp);
+//	}
+	
+//	public Employee updateEmp(Integer id, Employee emp) {
+//		Employee emp2=emprepo.findById(id)
+//				.orElseThrow(()->new DataNotFound("Employee id = "+id+"not exists"));
+//		
+//		emp2.setEmpName(emp.getEmpName());
+//		emp2.setEmpPhone(emp.getEmpPhone());
+//		emp2.setEmpPosition(emp.getEmpPosition());
+//		emp2.setEmpSalary(emp.getEmpSalary());
+//		emp2.setEmpEmail(emp.getEmpEmail());
+//		emp2.setEmpAddress(emp.getEmpAddress());
+//		emp2.setEmpDOB(emp.getEmpDOB());
+//		emp2.setEmpDOH(emp.getEmpDOH());
+//		emp2.setEmpJD(emp.getEmpJD());
+//		emp2.set
+//		
+//		
+//	}
+	
+	
+
+}

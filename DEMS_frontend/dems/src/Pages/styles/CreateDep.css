@@ -1,0 +1,74 @@
+.CreateDepForm {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #183464d3;
+  padding: 20px 30px;
+  margin-top: 80px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #000;
+}
+
+.DepView{
+  width : 45%;
+  margin: auto;
+  background-color: #183464d3;
+  padding: 20px 30px;
+  margin-top: 120px;
+   border-radius: 5px;
+  box-shadow: 2px 2px 10px #000;
+
+}
+
+.EmpView{
+  width : 45%;
+  margin: auto;
+  background-color: #183464d3;
+  padding: 20px 30px;
+  margin-top: 80px;
+   border-radius: 5px;
+  box-shadow: 2px 2px 10px #000;
+ 
+}
+
+.ip2 {
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  border: none;
+  width: 81%;
+}
+
+.ip {
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  border: none;
+  width: 76%;
+}
+
+.buttonflex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.flexcard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input {
+  display: flex;
+  justify-content: flex-start;
+}
+
+label {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+  margin-right: 25px;
+}

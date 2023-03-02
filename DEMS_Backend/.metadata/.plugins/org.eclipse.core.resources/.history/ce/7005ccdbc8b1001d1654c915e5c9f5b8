@@ -1,0 +1,28 @@
+package com.dems.main;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+import com.dems.main.repository.DepartmentRepo;
+
+@SpringBootApplication
+
+
+
+
+public class DemsBackendApplication  {
+	
+	@Autowired
+	private DepartmentRepo departmentRepository;
+
+	public static void main(String[] args) {
+		SpringApplication.run(DemsBackendApplication.class, args);
+	}
+	
+	
+	
+
+}

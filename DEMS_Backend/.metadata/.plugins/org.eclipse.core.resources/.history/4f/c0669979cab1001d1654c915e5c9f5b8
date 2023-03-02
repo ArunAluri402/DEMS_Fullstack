@@ -1,0 +1,5 @@
+package com.dems.main.exception;
+
+public class DataNotFound {
+
+}

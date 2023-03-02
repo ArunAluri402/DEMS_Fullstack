@@ -1,0 +1,56 @@
+package com.dems.main.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "employee")
+public class Employee {
+	
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+private int id;
+
+@Column(name = "empname")
+private String EmpName;
+
+@Column(name = "empposition")
+private String EmpPosition;
+
+@Column(name = "empsalary")
+private Long EmpSalary;
+
+@ManyToOne
+@JoinColumn(name= "id")
+private Department dep;
+
+@Column(name="empemail")
+private String EmpEmail;
+
+@Column(name="empphone")
+private long EmpPhone;
+
+@Column(name="empaddress")
+private String EmpAddress;
+
+@Column(name="empdob")
+private String EmpDOB;
+
+@Column(name="empdoh")
+private String EmpDOH;
+
+@Column(name="empjd")
+private String EmpJD;
+
+
+
+
+
+
+}

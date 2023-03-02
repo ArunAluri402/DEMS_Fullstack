@@ -1,0 +1,29 @@
+package com.example.demo.controller;
+
+
+
+import com.example.bean.Department;
+import com.example.bean.Employee;
+import com.example.service.DataService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import java.util.List;
+
+@RestController
+public class DataController {
+    
+    @Autowired
+    private DataService dataService;
+    
+    @GetMapping("/data")
+    public List<Department> getData() {
+        List<Department> departments = dataService.getAllDepartments();
+        for (Department department : departments) {
+            List<Employee> employees = dataService.getEmployeesByDepartment(department.getId());
+            department.setEmployees(employees);
+        }
+        return departments;
+    }
+}
+

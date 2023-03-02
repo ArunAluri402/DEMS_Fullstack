@@ -1,0 +1,26 @@
+package com.example.service;
+
+import com.example.bean.Department;
+import com.example.bean.Employee;
+import com.example.repository.DepartmentRepository;
+import com.example.repository.EmployeeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import java.util.List;
+
+@Service
+public class DataService {
+    
+    @Autowired
+    private DepartmentRepository
+    @Autowired
+    private EmployeeRepository employeeRepository;
+
+    public List<Department> getAllDepartments() {
+        return departmentRepository.findAll();
+    }
+
+    public List<Employee> getEmployeesByDepartment(int departmentId) {
+        return employeeRepository.findByDepartmentId(departmentId);
+    }
+}

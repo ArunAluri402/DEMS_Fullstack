@@ -1,0 +1,29 @@
+package com.example.demo.Services;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.ListCrudRepository;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.Model.Department;
+import com.example.demo.Model.Employee;
+import com.example.demo.Repository.EmployeeRepository;
+
+import java.util.List;
+
+@Service
+public class DataService {
+    
+   
+    @Autowired
+    private EmployeeRepository employeeRepository;
+
+    public List<Employee> getAllDepartments() {
+        ListCrudRepository<Employee, Integer> departmentRepository = null;
+		return departmentRepository.findAll();
+    }
+
+    public List<Employee> getEmployeesByDepartment(int departmentId) {
+        return employeeRepository.findByDepartmentId(departmentId);
+    }
+}

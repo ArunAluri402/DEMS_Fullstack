@@ -1,0 +1,5 @@
+spring.datasource.url=jdbc:mysql://localhost:3306/reactfullstack
+spring.datasource.username=root
+spring.datasource.password=1576
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create

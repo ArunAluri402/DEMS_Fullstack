@@ -1,0 +1,92 @@
+body {
+  background-color: #1834645b;
+}
+h2 {
+  background-color: #183464d3;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  margin: 0;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.CreateEmpForm {
+  width: 55%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #413650;
+  padding: 15px 30px;
+  padding-top: 35px;
+  margin-top: 70px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #000;
+  justify-content: space-between;
+}
+
+option {
+  padding: 7px 15px;
+}
+
+.CreateDepForm3 {
+  width: 45%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #00000067; */
+  background-color: #183464d3;
+  padding: 20px 30px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #000;
+}
+
+.CreateDepForm5{
+   width: 45%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #00000067; */
+  background-color: #183464d3;
+  padding: 20px 30px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #000;
+
+}
+
+.heading {
+  width: 97vw;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* .card {
+  display: flex;
+  flex-direction: column;
+} */
+
+h3 {
+  font-size: 16px;
+  color: #000;
+}
+
+.flexCard {
+  /* width: 25%; */
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.btnContainer {
+  position: absolute;
+  bottom: 0;
+  left: 26%;
+}

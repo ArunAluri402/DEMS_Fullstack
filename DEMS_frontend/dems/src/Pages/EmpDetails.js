@@ -77,54 +77,54 @@ function EmpDetails() {
         </thead>
 
         <tbody className="tbody">
-          {empData
-            ? empData
-                .filter(
-                  (res) =>
-                    res.empName
-                      .toLowerCase()
-                      .includes(searchTerm.toLowerCase()) ||
-                    res.empEmail
-                      .toLowerCase()
-                      .includes(searchTerm.toLowerCase())
-                )
+          {empData ? (
+            empData
+              .filter(
+                (res) =>
+                  res.empName
+                    .toLowerCase()
+                    .includes(searchTerm.toLowerCase()) ||
+                  res.empEmail.toLowerCase().includes(searchTerm.toLowerCase())
+              )
 
-                .map((i, k) => {
-                  return (
-                    <tr align="center" key={i.empid}>
-                      <td className="td">{i.empName}</td>
-                      <td className="td">{i.empPosition}</td>
-                      <td className="td">{i.empSalary}</td>
-                      <td className="td">{i.empEmail}</td>
-                      <td className="td">{i.empPhone}</td>
-                      <td className="td">{i.empAddress}</td>
-                      <td className="td">{i.empDOB}</td>
-                      <td className="td">{i.empDOH}</td>
-                      <td className="td">{i.empJD}</td>
-                      <td className="td">
-                        <Link to={`/viewEmp/${i.empid}`}>
-                          <button className="btn">View</button>
-                        </Link>
-                      </td>
-                      <td className="td">
-                        <Link to={`/editEmp/${i.empid}`}>
-                          <button className="btn">Edit</button>
-                        </Link>
-                      </td>
-                      <td className="td">
-                        <Link>
-                          <button
-                            className="btn"
-                            onClick={() => delEmp(i.empid)}
-                          >
-                            Delete
-                          </button>
-                        </Link>
-                      </td>
-                    </tr>
-                  );
-                })
-            : "Data Not Found"}
+              .map((i, k) => {
+                return (
+                  <tr align="center" key={i.empid}>
+                    <td className="td">{i.empName}</td>
+                    <td className="td">{i.empPosition}</td>
+                    <td className="td">{i.empSalary}</td>
+                    <td className="td">{i.empEmail}</td>
+                    <td className="td">{i.empPhone}</td>
+                    <td className="td">{i.empAddress}</td>
+                    <td className="td">{i.empDOB}</td>
+                    <td className="td">{i.empDOH}</td>
+                    <td className="td">{i.empJD}</td>
+                    <td className="td">
+                      <Link to={`/viewEmp/${i.empid}`}>
+                        <button className="btn">View</button>
+                      </Link>
+                    </td>
+                    <td className="td">
+                      <Link to={`/editEmp/${i.empid}`}>
+                        <button className="btn">Edit</button>
+                      </Link>
+                    </td>
+                    <td className="td">
+                      <Link>
+                        <button className="btn" onClick={() => delEmp(i.empid)}>
+                          Delete
+                        </button>
+                      </Link>
+                    </td>
+                  </tr>
+                );
+              })
+          ) : (
+            <tr>
+              {" "}
+              <th>Nodata</th>
+            </tr>
+          )}
         </tbody>
       </table>
     </div>

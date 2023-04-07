@@ -40,7 +40,7 @@ function CreateEmployee() {
     },
   ]);
 
-  console.log(dep);
+
   const handleChange = (e) => {
     const newData = { ...data };
     newData[e.target.id] = e.target.value;
@@ -73,6 +73,12 @@ function CreateEmployee() {
           depEmpCount: parseInt(res.depEmpCount),
         });
       });
+    } else {
+      const fetchData = async () => {
+        const resp = await ApiData.getAll();
+        setDep(resp);
+      };
+      fetchData();
     }
   }, [id]);
 
@@ -114,17 +120,6 @@ function CreateEmployee() {
     setData(newData);
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const resp = await ApiData.getAll();
-      setDep(resp);
-    };
-    fetchData();
-  }, []);
-
-  console.log(selectdep);
-  console.log(data);
-
   return (
     <div>
       <div className="FormContainer">
@@ -135,9 +130,10 @@ function CreateEmployee() {
 
             <select
               className="ip2"
-              value={empid?showdep:selectdep}
+              value={empid ? showdep : selectdep}
               onChange={handleChangeDep}
               id="depName"
+              disabled={empid ? true : false}
             >
               <option>--Select Department--</option>
               {dep.map((item) => {
@@ -181,6 +177,7 @@ function CreateEmployee() {
               className="ip"
               id="empPhone"
               type="number"
+              maxLength={10}
               value={data.empPhone}
               onChange={handleChange}
             />
@@ -193,6 +190,7 @@ function CreateEmployee() {
               type="text"
               value={data.empAddress}
               onChange={handleChange}
+              required={true}
             />
           </div>
           <div className="flexcard">
@@ -204,6 +202,7 @@ function CreateEmployee() {
               placeholder="Position"
               value={data.empPosition}
               onChange={handleChange}
+              required={true}
             />
           </div>
           <div className="flexcard">
@@ -215,6 +214,7 @@ function CreateEmployee() {
               placeholder="Salary"
               value={data.empSalary}
               onChange={handleChange}
+              required={true}
             />
           </div>
           <div className="flexcard">
@@ -248,6 +248,7 @@ function CreateEmployee() {
               placeholder="Job Description"
               value={data.empJD}
               onChange={handleChange}
+              required={true}
             />
           </div>
           <div className="buttonflex">

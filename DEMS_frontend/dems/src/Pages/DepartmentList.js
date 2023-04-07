@@ -65,7 +65,7 @@ const DepartmentList = () => {
         View Employees
       </button>
 
-      <table className="table" align="center" cellPadding="12px">
+      <table className="table" align="center" cellPadding="8px">
         <thead className="thead">
           <tr className="tr">
             <th className="th">Department Name</th>

@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import CreateDepartment from "./Pages/CreateDepartment";
 import CreateEmployee from "./Pages/CreateEmployee";
-import Dashboard from "./Pages/Dashboard";
 import DepartmentDetail from "./Pages/DepartmentDetail";
 import DepartmentList from "./Pages/DepartmentList";
 import EmpDetails from "./Pages/EmpDetails";

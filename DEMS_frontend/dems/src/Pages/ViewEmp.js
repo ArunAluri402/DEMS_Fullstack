@@ -15,7 +15,6 @@ function ViewEmp() {
       });
     }
   }, [empid]);
-  console.log(data);
 
   return (
     <div>
